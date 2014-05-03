@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2014032401;
-$plugin->requires  = 2013110500;
+$plugin->version   = 2014050300;
+$plugin->requires  = 2014042400;
 $plugin->component = 'theme_amelia';
 $plugin->dependencies = array(
     'theme_bootstrap'  => 2013110500
