@@ -3,7 +3,7 @@ About this theme
 
 ![image1](pix/screenshot.png "Moodle Bootstrap Screenshot")
 
-This is the Bootstrap theme for Moodle.
+This is Bootswatch amelia on the Bootstrap 3 theme for Moodle.
 
 * package   amelia bootswatch for Bootstrap 3
 * copyright 2014 Bas Brands. www.sonsbeekmedia.nl
