@@ -22,6 +22,23 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+function theme_amelia_process_css($css, $theme) {
+
+    // Set the background image for the logo.
+    $logo = $theme->setting_file_url('logo', 'logo');
+    $css = theme_amelia_set_logo($css, $logo);
+
+    // Set custom CSS.
+    if (!empty($theme->settings->customcss)) {
+        $customcss = $theme->settings->customcss;
+    } else {
+        $customcss = null;
+    }
+    $css = theme_amelia_set_customcss($css, $customcss);
+
+    return $css;
+}
+
 
 /**
  * Parses CSS before it is cached.
