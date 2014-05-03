@@ -12,3 +12,7 @@ This is Bootswatch amelia on the Bootstrap 3 theme for Moodle.
 
 For more info on Boostrap 3 themes read
 https://github.com/bmbrands/theme_bootstrap/blob/master/README.md
+
+This Bootswatch has been created by:
+
+https://github.com/thomaspark/bootswatch
