@@ -79,11 +79,6 @@ function theme_amelia_set_logo($css, $logo) {
         $replacement = '';
     } else {
         $dimensions = getimagesize('http:'.$logo);
-        $debugfile = '/tmp/image2.txt';
-        $fh = fopen($debugfile, 'w');
-        fwrite($fh, print_r($logo, true));
-        fwrite($fh, print_r($dimensions, true));
-        fclose($fh);
         $width = $dimensions[0] . 'px';
         $height = $dimensions[1] . 'px';
         $display = 'block';
