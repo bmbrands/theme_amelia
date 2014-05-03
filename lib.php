@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme Amelia lib.
+ * Theme amelia lib.
  *
  * @package    theme_amelia
  * @copyright  2014 Bas Brands
@@ -66,20 +66,42 @@ function theme_amelia_logo($theme) {
     return $css;
 }
 
-/**
- * Adds the logo to CSS.
- *
- * @param string $css The CSS.
- * @param string $logo The URL of the logo.
- * @return string The parsed CSS
- */
 function theme_amelia_set_logo($css, $logo) {
-    $tag = '[[setting:logo]]';
+    $logotag = '[[setting:logo]]';
+    $logoheight = '[[logoheight]]';
+    $logowidth = '[[logowidth]]';
+    $logodisplay = '[[logodisplay]]';
+    $width = '0';
+    $height = '0';
+    $display = 'none';
+    $replacement = $logo;
+    if (is_null($replacement)) {
+        $replacement = '';
+    } else {
+        $dimensions = getimagesize('http:'.$logo);
+        $debugfile = '/tmp/image2.txt';
+        $fh = fopen($debugfile, 'w');
+        fwrite($fh, print_r($logo, true));
+        fwrite($fh, print_r($dimensions, true));
+        fclose($fh);
+        $width = $dimensions[0] . 'px';
+        $height = $dimensions[1] . 'px';
+        $display = 'block';
+    }
+    $css = str_replace($logotag, $replacement, $css);
+    $css = str_replace($logoheight, $height, $css);
+    $css = str_replace($logowidth, $width, $css);
+    $css = str_replace($logodisplay, $display, $css);
+
+    return $css;
+}
+
+function old_theme_amelia_set_logo($css, $logo) {
+    $logotag = '[[setting:logo]]';
     $replacement = $logo;
     if (is_null($replacement)) {
         $replacement = '';
     }
-
     $css = str_replace($tag, $replacement, $css);
 
     return $css;

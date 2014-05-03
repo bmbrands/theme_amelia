@@ -3,12 +3,12 @@
 a.logo {
     background: url([[setting:logo]]) no-repeat 0 0;
     background-size: 100% auto;
-    display: block;
+    display: [[logodisplay]];
     float: left;
-    height: 75px;
+    height: [[logoheight]];
     margin: 0;
     padding: 0;
-    width: 130px;
+    width: [[logowidth]];
 }
 
 .dir-rtl a.logo {
