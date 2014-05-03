@@ -1,7 +1,7 @@
 About this theme
 ================
 
-![image1](pix/screenshot.jpg "Moodle Bootstrap Screenshot")
+![image1](pix/screenshot.png "Moodle Bootstrap Screenshot")
 
 This is the Bootstrap theme for Moodle.
 
